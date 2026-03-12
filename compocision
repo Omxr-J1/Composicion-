@@ -1,0 +1,38 @@
+using System;
+
+public class Computadora
+{
+    private Procesador procesador;
+    
+    public Computadora()
+    {
+        procesador=new Procesador();
+        procesador.Marca="M4";
+    }
+   
+    public void Encender()
+    {
+    Console.WriteLine(" La computadora esta encendida");
+    procesador.mostrarMarca();
+    }
+}
+
+public class Procesador
+{
+    public string Marca;
+    public void mostrarMarca()=>Console.WriteLine($" El procesador de la mac es {Marca}");
+    
+}
+
+class program
+{
+    static void Main()
+    {
+        // M4=new Procesador();
+        //M4.Marca="M4";
+        //M4.mostrarMarca();
+        Computadora MacbookPro=new Computadora();
+        MacbookPro.Encender();
+        
+    }
+}
